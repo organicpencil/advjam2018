@@ -33,6 +33,15 @@ func _change_pos(newPos):
 	position = $"..".map_to_world(tilemapPosition)
 	pass
 
-func _process(delta):
+func _process_turn():
+	var finishTurn = false
 	
-	pass
+	while !finishTurn:
+		finishTurn = _turn()
+		yield(get_tree(), "idle_frame")
+	return
+
+func _turn():
+	if Input.is_action_pressed("ui_up"):
+		return true
+	return false
