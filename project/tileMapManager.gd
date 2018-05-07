@@ -20,3 +20,7 @@ func _get_range(origin, tile_range):
 		newTiles = tiles.duplicate()
 	
 	return tiles
+
+func _pixel_to_hex_tile(globalPos):
+	
+	pass
