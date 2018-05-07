@@ -8,6 +8,8 @@ enum CHAR_TRAITS {
 
 export var tilemapPosition = Vector2(0, 0) # Grid Position
 
+export var movementRange = 1 # 		Max tile movement in a single turn
+
 export var maxHP = 0
 export var hp = 0
 
@@ -38,14 +40,22 @@ func _change_pos(newPos):
 
 func _process_turn():
 	finishTurn = false
+	_begin_turn()
 	while !finishTurn:
 		_turn()
 		yield(get_tree(), "idle_frame")
+	_end_turn()
 	emit_signal("_finished_turn", self)
 	return
 
+func _begin_turn():
+	pass
+
 func _turn():
 	_finish_turn()
+	pass
+
+func _end_turn():
 	pass
 
 func _finish_turn():
