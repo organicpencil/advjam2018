@@ -1,6 +1,7 @@
 extends Node2D
 
 signal _finished_turn()
+var finishTurn = false
 
 enum CHAR_TRAITS {
 	NONE, QUICK_THINKING, FAST_AIM, LEADER}
@@ -36,15 +37,17 @@ func _change_pos(newPos):
 	pass
 
 func _process_turn():
-	var finishTurn = false
+	finishTurn = false
 	while !finishTurn:
-		finishTurn = _turn()
+		_turn()
 		yield(get_tree(), "idle_frame")
-	emit_signal("_finished_turn")
+	emit_signal("_finished_turn", self)
 	return
 
 func _turn():
-	if Input.is_action_just_pressed("ui_up"):
-		_change_pos(Vector2(0, 1))
-		return true
-	return false
+	_finish_turn()
+	pass
+
+func _finish_turn():
+	finishTurn = true
+	pass

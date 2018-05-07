@@ -22,14 +22,13 @@ func _ready():
 	pass
 
 func _initiate_turn_loop():
-	print("SSSSSSSSSSSSS")
 	while true:
 		turnNumber += 1
 		for i in range(0, activePieces.size()):
 			activePieces[i]._process_turn()
 			yield(activePieces[i], "_finished_turn")
-			print("FUCC")
 	pass
 
-func _turn_ended():
+func _turn_ended(piece):
+	print(piece.name + " finished their turn!")
 	pass
