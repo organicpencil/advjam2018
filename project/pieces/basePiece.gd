@@ -25,7 +25,7 @@ export var traits = {NONE : 0}
 # being a multiplier (where applicable).
 
 func _ready():
-	position = $"../TileMap".map_to_world(tilemapPosition)
+	position = $"..".map_to_world(tilemapPosition)
 
 func _change_pos(newPos):
 	tilemapPosition = newPos
