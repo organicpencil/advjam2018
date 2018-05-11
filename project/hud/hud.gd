@@ -37,6 +37,7 @@ func _input(event):
 			if length < current_message.length():
 				# Skip to end
 				dialogue.text = current_message
+				emit_signal("message_finished")
 			else:
 				# Onward
 				emit_signal("message_clicked")
