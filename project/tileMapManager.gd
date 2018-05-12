@@ -24,10 +24,11 @@ func _get_range(origin, tile_range):
 #Don't even try to understand what's going on here, it's no use
 func _pixel_to_hex_tile(globalPos):
 	var pos = globalPos / cell_size
+	pos += Vector2(0.5, -0.5)
 	
-	var temp = floor(pos.x + sqrt(3) * pos.y + 1)
-	var q = floor((floor(2 * pos.x + 1) + temp) / 3)
-	var r = floor((temp + floor(-pos.x + sqrt(3) * pos.y + 1)) / 3)
-	q -= floor(r / 2) + 1
+	pos.x += (pos.y - floor(pos.y)) * 0.5
+	
+	var q = floor(pos.x) - 1
+	var r = floor(pos.y) + 1
 	
 	return Vector2(q, r)

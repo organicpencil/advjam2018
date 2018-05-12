@@ -84,39 +84,11 @@ traits = {
 
 [node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War" index="0"]
 
-position = Vector2( 0, -128 )
+position = Vector2( 4.55664, -143.158 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Char_War2" type="Node2D" parent="Map/TileMap" index="1" groups=[
-"Playable_Piece",
-]]
-
-editor/display_folded = true
-position = Vector2( 244.179, 3.09088 )
-z_index = 5
-script = ExtResource( 4 )
-_sections_unfolded = [ "Z Index" ]
-tilemapPosition = Vector2( 1, 0 )
-movementRange = 2
-maxHP = 0
-hp = 0
-atk = 0
-def = 0
-dex = 0
-sta = 0
-wsm = 0
-traits = {
-0: 0
-}
-
-[node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War2" index="0"]
-
-position = Vector2( 0, -128 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Temp" type="Node" parent="Map/TileMap" index="2"]
+[node name="Temp" type="Node" parent="Map/TileMap" index="1"]
 
 script = ExtResource( 6 )
 

@@ -31,11 +31,16 @@ export var traits = {NONE : 0}
 # being a multiplier (where applicable).
 
 func _ready():
-	position = $"..".map_to_world(tilemapPosition)
+	_set_pos(tilemapPosition)
 	pass
 
 func _change_pos(newPos):
 	tilemapPosition += newPos
+	position = $"..".map_to_world(tilemapPosition)
+	pass
+
+func _set_pos(newPos):
+	tilemapPosition = newPos
 	position = $"..".map_to_world(tilemapPosition)
 	pass
 
@@ -54,7 +59,7 @@ func _begin_turn():
 	pass
 
 func _turn():
-	_finish_turn() #Overrided in every piece
+	_finish_turn() #Overriden in every piece
 	pass
 
 func _end_turn():

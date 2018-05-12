@@ -8,7 +8,8 @@ func _begin_turn():
 
 func _turn():
 	if Input.is_action_just_pressed("mouse1"):
-		print(str($".."._pixel_to_hex_tile(get_global_mouse_position())))
+		print($".."._pixel_to_hex_tile(get_global_mouse_position()))
+		_set_pos($".."._pixel_to_hex_tile(get_global_mouse_position()))
 		_finish_turn()
 	pass
 
