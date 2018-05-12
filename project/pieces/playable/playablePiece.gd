@@ -8,10 +8,7 @@ func _begin_turn():
 
 func _turn():
 	if Input.is_action_just_pressed("mouse1"):
-		if $".."._get_range(tilemapPosition, movementRange).has($"..".world_to_map(get_global_mouse_position())):
-			print("GOTCHEE" + str($"..".world_to_map(get_global_mouse_position())))
-		else:
-			print("F" + str($"..".world_to_map(get_global_mouse_position())))
+		print(str($".."._pixel_to_hex_tile(get_global_mouse_position())))
 		_finish_turn()
 	pass
 

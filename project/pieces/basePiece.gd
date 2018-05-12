@@ -1,6 +1,7 @@
 extends Node2D
 
 signal _finished_turn()
+signal _began_turn()
 var finishTurn = false
 
 enum CHAR_TRAITS {
@@ -40,6 +41,7 @@ func _change_pos(newPos):
 
 func _process_turn():
 	finishTurn = false
+	emit_signal("_began_turn")
 	_begin_turn()
 	while !finishTurn:
 		_turn()
@@ -52,7 +54,7 @@ func _begin_turn():
 	pass
 
 func _turn():
-	_finish_turn()
+	_finish_turn() #Overrided in every piece
 	pass
 
 func _end_turn():
