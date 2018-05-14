@@ -66,10 +66,11 @@ _sections_unfolded = [ "Cell" ]
 "Playable_Piece",
 ]]
 
+editor/display_folded = true
 z_index = 5
 script = ExtResource( 4 )
 tilemapPosition = Vector2( 0, 0 )
-movementRange = 1
+movementRange = 3
 maxHP = 0
 hp = 0
 atk = 0
@@ -83,7 +84,7 @@ traits = {
 
 [node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War" index="0"]
 
-position = Vector2( 133.052, -51.4565 )
+position = Vector2( 128, -48 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 

@@ -42,6 +42,4 @@ func _pixel_to_hex_tile(globalPos):
 		else:
 			realTile += DIRS[3] #Upper Left
 	
-	print(str(realTile) + " _ " + str(pos) + " : " + str(1-pos.y) + " : " + str(1-abs((pos.x - 0.5)*2/3)))
-	
 	return realTile
