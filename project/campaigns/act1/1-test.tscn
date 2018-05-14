@@ -17,6 +17,7 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65533, 0, 0, -6
 
 script = ExtResource( 3 )
 tilemapPosition = Vector2( 0, 0 )
+movementRange = 1
 maxHP = 0
 hp = 0
 atk = 0
