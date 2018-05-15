@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duck_hooded.png-a172dc88362d0ff88e0230d9f7af26dd.stex"
+path="res://.import/dm.png-57f266d20b9e73162895706001b675e9.stex"
 
 [deps]
 
-source_file="res://hud/avatars/duck_hooded.png"
+source_file="res://hud/avatars/dm.png"
 source_md5="c1e1fd58faa206ee929c83c614862898"
 
-dest_files=[ "res://.import/duck_hooded.png-a172dc88362d0ff88e0230d9f7af26dd.stex" ]
+dest_files=[ "res://.import/dm.png-57f266d20b9e73162895706001b675e9.stex" ]
 dest_md5="c2e75dd4eff8a64934c0eaa0cc3b280c"
 
 [params]

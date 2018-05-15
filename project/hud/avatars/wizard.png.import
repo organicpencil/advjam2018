@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duck.png-ea36a5b0c96ac7e070f837bb0a81018b.stex"
+path="res://.import/wizard.png-f114ae325a7197c37306d635356a0610.stex"
 
 [deps]
 
-source_file="res://hud/avatars/duck.png"
+source_file="res://hud/avatars/wizard.png"
 source_md5="a1c4f1414ba6b39d6a6dc665c80a3451"
 
-dest_files=[ "res://.import/duck.png-ea36a5b0c96ac7e070f837bb0a81018b.stex" ]
+dest_files=[ "res://.import/wizard.png-f114ae325a7197c37306d635356a0610.stex" ]
 dest_md5="cf1daf673a4362c88f56242c70aa6070"
 
 [params]
