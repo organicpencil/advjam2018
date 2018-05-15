@@ -11,6 +11,7 @@ func _ready():
 	pass
 
 func message(avatar_id, text):
+	$Top.show()
 	clear_options()
 	
 	dialogue.text = ""
@@ -18,6 +19,9 @@ func message(avatar_id, text):
 	
 	if text.length() == 0:
 		call_deferred("emit_signal", "message_finished")
+	
+func hide_message():
+	$Top.hide()
 	
 func option(text, target, callback):
 	var opt = preload("res://hud/option.tscn").instance()

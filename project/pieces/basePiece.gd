@@ -7,7 +7,7 @@ var finishTurn = false
 enum CHAR_TRAITS {
 	NONE, QUICK_THINKING, FAST_AIM, LEADER}
 
-export var tilemapPosition = Vector2(0, 0) # Grid Position
+var tilemapPosition = null # Grid Position
 
 export var movementRange = 1 # 		Max tile movement in a single turn
 
@@ -31,8 +31,13 @@ export var traits = {NONE : 0}
 # being a multiplier (where applicable).
 
 func _ready():
-	position = $"..".map_to_world(tilemapPosition)
-	pass
+	if tilemapPosition == null:
+		# Editor: Snap to grid based on starting position
+		tilemapPosition = $"..".world_to_map(position)
+		position = $"..".map_to_world(tilemapPosition)
+	else:
+		# Not editor: ?
+		pass
 
 func _change_pos(newPos):
 	tilemapPosition += newPos
