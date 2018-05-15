@@ -1,7 +1,7 @@
 extends Node
 
 onready var hud = $HUD
-var NEXT_ENCOUNTER = preload("res://campaigns/act1/test.tscn")
+var NEXT_ENCOUNTER = preload("res://campaigns/act1/2-town.tscn")
 
 func _ready():
 	start_encounter()
