@@ -10,7 +10,7 @@ func start_encounter():
 	hud.message(hud.AVATAR_DM, "Your party has traveled to the city of Ylihcester in search of violent work. The sun has fallen and only one inn has available rooms: The Squeaking Freezer, renowned for its rats and poor insulation.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_RANGER, "How do you even spell that?")
+	hud.message(hud.AVATAR_RANGER, "Ylihcester? How do you even spell that?")
 	yield(hud, "message_clicked")
 	
 	hud.message(hud.AVATAR_DM, "Y-L-I-H-C-E-S-T-E-R")
