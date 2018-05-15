@@ -50,7 +50,7 @@ func option_morning():
 	hud.message(hud.AVATAR_DM, "The party shares a room, with barely enough money to pay for the night. When you pay the next morning, the barkeep is impressed and suggests speaking to <name here> about a possible employment opportunity.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_WIZARD, "Impressed that we all fit in such a small room? What kind of job is this??")
+	hud.message(hud.AVATAR_WIZARD, "Impressed that we all fit in such a small room?")
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_DM, "No, I mean - impressed that you actually paid. Not many people walk into that place with money.")
 	yield(hud, "message_clicked")
