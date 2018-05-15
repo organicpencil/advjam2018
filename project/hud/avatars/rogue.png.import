@@ -7,10 +7,10 @@ path="res://.import/rogue.png-945a717003d8d353d506ed5dad9c265e.stex"
 [deps]
 
 source_file="res://hud/avatars/rogue.png"
-source_md5="a1c4f1414ba6b39d6a6dc665c80a3451"
+source_md5="b1c43a292d05371a22a4547c668a29fe"
 
 dest_files=[ "res://.import/rogue.png-945a717003d8d353d506ed5dad9c265e.stex" ]
-dest_md5="cf1daf673a4362c88f56242c70aa6070"
+dest_md5="0ac6d3ae8f2318ded76513277f5f467b"
 
 [params]
 

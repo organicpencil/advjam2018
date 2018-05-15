@@ -7,10 +7,10 @@ path="res://.import/wizard.png-f114ae325a7197c37306d635356a0610.stex"
 [deps]
 
 source_file="res://hud/avatars/wizard.png"
-source_md5="a1c4f1414ba6b39d6a6dc665c80a3451"
+source_md5="b98eae52e6c401b06084bc67ac560b50"
 
 dest_files=[ "res://.import/wizard.png-f114ae325a7197c37306d635356a0610.stex" ]
-dest_md5="cf1daf673a4362c88f56242c70aa6070"
+dest_md5="8d3e20f3ba7a2d1743438d30755d5b9b"
 
 [params]
 
