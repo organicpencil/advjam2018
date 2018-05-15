@@ -3,6 +3,11 @@ extends CanvasLayer
 signal message_clicked
 signal message_finished
 
+var AVATAR_DM = preload("res://hud/avatars/dm.png")
+var AVATAR_RANGER = preload("res://hud/avatars/ranger.png")
+var AVATAR_ROGUE = preload("res://hud/avatars/rogue.png")
+var AVATAR_WIZARD = preload("res://hud/avatars/wizard.png")
+
 onready var dialogue = $Top/Panel/Label
 
 var current_message = ""
@@ -10,14 +15,17 @@ var current_message = ""
 func _ready():
 	pass
 
-func message(avatar_id, text):
+func message(avatar, text):
 	$Top.show()
 	clear_options()
+	
+	$Top/Avatar.texture = avatar
 	
 	dialogue.text = ""
 	current_message = text
 	
 	if text.length() == 0:
+		$Top.hide()
 		call_deferred("emit_signal", "message_finished")
 	
 func hide_message():
