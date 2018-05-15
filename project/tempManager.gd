@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 func _flush_temporary_nodes():
 	for i in get_children():
