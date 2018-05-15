@@ -120,8 +120,10 @@ func option_run():
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_WIZARD, "Nice.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_DM, "<write more stuff>")
+	hud.message(hud.AVATAR_DM, 'Ok, so you got out of paying the tab. On the way out - you notice a flier on the door. <name here> is seeking "adventurers" for a special job.')
 	yield(hud, "message_clicked")
+	
+	get_tree().change_scene_to(NEXT_ENCOUNTER)
 	
 ##########
 func option_fight():
