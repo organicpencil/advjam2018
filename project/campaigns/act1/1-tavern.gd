@@ -12,6 +12,12 @@ func start_combat():
 	
 func combat_finished():
 	pass
+	
+func next_encounter():
+	hud.message(hud.AVATAR_DM, "<abrupt scene change>")
+	yield(hud, "message_clicked")
+	
+	get_tree().change_scene_to(NEXT_ENCOUNTER)
 
 func start_encounter():
 	print("FIXME - Need signal for combat finish")
@@ -39,7 +45,7 @@ func option_sleep():
 func option_door():
 	hud.message(hud.AVATAR_DM, "The first room you try is unoccupied.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_ROGUE, "Best we all cram in the same room. Save some money.")
+	hud.message(hud.AVATAR_RANGER, "Best we all cram in the same room. Save some money.")
 	yield(hud, "message_finished")
 	
 	hud.option("Whatever", self, "option_morning")
@@ -55,7 +61,7 @@ func option_morning():
 	hud.message(hud.AVATAR_DM, "No, I mean - impressed that you actually paid. Not many people walk into that place with money.")
 	yield(hud, "message_clicked")
 	
-	get_tree().change_scene_to(NEXT_ENCOUNTER)
+	next_encounter()
 	
 func option_morning_nopay():
 	hud.message(hud.AVATAR_DM, "The party splits off in two rooms. It's actually quite comfortable, despite the cold and a full night of rats scratching in the walls. However - the next morning, the party comes up short and is unable to pay for both rooms.")
@@ -65,7 +71,7 @@ func option_morning_nopay():
 	hud.message(hud.AVATAR_DM, "The barkeep tells you not to worry about it. The people that stay here can rarely pay. He's happy enough that you managed to afford 1 room, and suggests that you seek out <name here> for possible employment.")
 	yield(hud, "message_clicked")
 	
-	get_tree().change_scene_to(NEXT_ENCOUNTER)
+	next_encounter()
 	
 func option_morning_outside():
 	hud.message(hud.AVATAR_DM, "It's a long and cold night, but only slightly colder than it was inside. At least you're not kept up by the rats in the wall.")
@@ -73,7 +79,7 @@ func option_morning_outside():
 	hud.message(hud.AVATAR_DM, "The others chose to share a room, with barely enough money to pay for the night. You regroup in the tavern the next morning. The barkeep - impressed that you actually paid - suggests speaking to <name here> about a possible employment opportunity.")
 	yield(hud, "message_clicked")
 	
-	get_tree().change_scene_to(NEXT_ENCOUNTER)
+	next_encounter()
 	 
 	
 ##########
@@ -101,19 +107,18 @@ func option_work():
 	hud.message(hud.AVATAR_DM, "Barkeep: Hmm... in that case, try <name> over at the <place>. There's been talk of a pesky wizard harassing the countryside.")
 	yield(hud, "message_clicked")
 	
-	get_tree().change_scene_to(NEXT_ENCOUNTER)
+	next_encounter()
 	
 func option_refuse():
 	hud.message(hud.AVATAR_DM, "Barkeep: I don\'t know why I even bother. Nobody ever pays.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_ROGUE, "Well then. Had I known that...")
+	hud.message(hud.AVATAR_ROGUE, "Well then.")
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_RANGER, "Can we ask him about local employment opportunities?")
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_DM, "I don't think the barkeep wants to help you right now. However, you do see a flier posted on the wall. <name here> is looking to hire adventuring-types for a special job.")
 	yield(hud, "message_clicked")
 	
-	get_tree().change_scene_to(NEXT_ENCOUNTER)
 	
 func option_run():
 	hud.message(hud.AVATAR_DM, 'The barkeep eyes you suspiciously. "Alright. But hurry up."')
@@ -123,7 +128,7 @@ func option_run():
 	hud.message(hud.AVATAR_DM, 'Ok, so you got out of paying the tab. On the way out - you notice a flier on the door. <name here> is seeking "adventurers" for a special job.')
 	yield(hud, "message_clicked")
 	
-	get_tree().change_scene_to(NEXT_ENCOUNTER)
+	next_encounter()
 	
 ##########
 func option_fight():
