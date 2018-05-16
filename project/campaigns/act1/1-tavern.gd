@@ -39,7 +39,7 @@ func option_sleep():
 func option_door():
 	hud.message(hud.AVATAR_DM, "The first room you try is unoccupied.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_ROGUE, "Best we all cram in the same room. Save some money.")
+	hud.message(hud.AVATAR_RANGER, "Best we all cram in the same room. Save some money.")
 	yield(hud, "message_finished")
 	
 	hud.option("Whatever", self, "option_morning")
