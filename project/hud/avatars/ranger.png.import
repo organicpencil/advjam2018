@@ -7,10 +7,10 @@ path="res://.import/ranger.png-cb2cd0c054e13db49a0509870fcc47e6.stex"
 [deps]
 
 source_file="res://hud/avatars/ranger.png"
-source_md5="a1c4f1414ba6b39d6a6dc665c80a3451"
+source_md5="4671561a070da26560d3cad7bdddd933"
 
 dest_files=[ "res://.import/ranger.png-cb2cd0c054e13db49a0509870fcc47e6.stex" ]
-dest_md5="cf1daf673a4362c88f56242c70aa6070"
+dest_md5="3bb6221b05f5bb3344b4fc29c8b9bf9b"
 
 [params]
 
