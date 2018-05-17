@@ -119,6 +119,7 @@ func option_refuse():
 	hud.message(hud.AVATAR_DM, "I don't think the barkeep wants to help you right now. However, you do see a flier posted on the wall. <name here> is looking to hire adventuring-types for a special job.")
 	yield(hud, "message_clicked")
 	
+	next_encounter()
 	
 func option_run():
 	hud.message(hud.AVATAR_DM, 'The barkeep eyes you suspiciously. "Alright. But hurry up."')
