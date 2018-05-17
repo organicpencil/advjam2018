@@ -1,7 +1,7 @@
 extends Node
 
 onready var hud = $HUD
-var NEXT_ENCOUNTER = preload("res://campaigns/act1/test.tscn")
+var NEXT_ENCOUNTER = preload("res://campaigns/act1/6-castle_entrance.tscn")
 
 func _ready():
 	start_encounter()
@@ -12,4 +12,4 @@ func start_encounter():
 	hud.message(hud.AVATAR_DM, "Well, the module called for another encounter in the woods, but I ran out of time. So we're skipping directly to the wizard's castle.")
 	yield(hud, "message_clicked")
 	
-	change_scene_to(NEXT_ENCOUNTER)
+	get_tree().change_scene_to(NEXT_ENCOUNTER)
