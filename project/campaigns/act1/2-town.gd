@@ -15,4 +15,7 @@ func start_encounter():
 	hud.option("Begin the epic journey", self, "option_leave")
 	
 func option_leave():
+	hud.message(hud.AVATAR_DM, "Following your instructions, you set out in the woods in search of the evil wizard's castle.")
+	yield(hud, "message_clicked")
+	
 	get_tree().change_scene_to(NEXT_ENCOUNTER)
