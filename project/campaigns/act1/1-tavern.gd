@@ -2,6 +2,7 @@ extends Node
 
 onready var hud = $HUD
 var NEXT_ENCOUNTER = preload("res://campaigns/act1/2-town.tscn")
+var free_ride = false
 
 func _ready():
 	start_encounter()
@@ -45,18 +46,33 @@ func option_sleep():
 func option_door():
 	hud.message(hud.AVATAR_DM, "The first room you try is unoccupied.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_RANGER, "Best we all cram in the same room. Save some money.")
-	yield(hud, "message_finished")
 	
-	hud.option("Whatever", self, "option_morning")
-	hud.option("Absolutely not!", self, "option_morning_nopay")
-	hud.option("Honestly I'd rather sleep outside", self, "option_morning_outside")
+	if !free_ride:
+		hud.message(hud.AVATAR_RANGER, "Best we all cram in the same room. Save some money.")
+		yield(hud, "message_finished")
+		
+		hud.option("Whatever", self, "option_morning")
+		hud.option("Absolutely not!", self, "option_morning_nopay")
+		hud.option("Honestly I'd rather sleep outside", self, "option_morning_outside")
+		
+	else:
+		hud.message(hud.AVATAR_WIZARD, "So long as it's free... perhaps we can have separate rooms?")
+		yield(hud, "message_clicked")
+		hud.message(hud.AVATAR_DM, "All three rooms are unoccupied.")
+		yield(hud, "message_clicked")
+		hud.message(hud.AVATAR_RANGER, "I'll stay with the duck. The rest can have their own room.")
+		yield(hud, "message_clicked")
+		hud.message(hud.AVATAR_DM, "Very well. You stay the night without paying. Upon leaving - you notice a flier on the door. <name here> is hiring adventurers for an undisclosed task.")
+		yield(hud, "message_clicked")
+		
+		next_encounter()
+		
 	
 func option_morning():
 	hud.message(hud.AVATAR_DM, "The party shares a room, with barely enough money to pay for the night. When you pay the next morning, the barkeep is impressed and suggests speaking to <name here> about a possible employment opportunity.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_WIZARD, "Impressed that we all fit in such a small room?")
+	hud.message(hud.AVATAR_ROGUE, "Impressed that we all fit in such a small room?")
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_DM, "No, I mean - impressed that you actually paid. Not many people walk into that place with money.")
 	yield(hud, "message_clicked")
@@ -150,12 +166,14 @@ func option_extort():
 	hud.option("Rip out some wood and take it with you", self, "option_wood")
 	
 func option_wood():
-	hud.message(hud.AVATAR_RANGER, "Of all things to steal...")
+	hud.message(hud.AVATAR_ROGUE, "Of all things to steal...")
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_WIZARD, "Hey, gotta take what you can get.")
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_DM, "Barkeep: Please, don't do that! You can stay the night for free.")
 	yield(hud, "message_finished")
+	
+	free_ride = true
 	
 	hud.option("Fine...", self, "option_sleep")
 	
