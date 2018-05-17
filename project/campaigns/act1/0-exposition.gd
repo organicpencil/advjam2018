@@ -11,16 +11,34 @@ func start_encounter():
 	hud.message(hud.AVATAR_DM, "Hi there! Allow me to introduce everyone...")
 	yield(hud, "message_clicked")
 	
+	var chicken = hud.get_node("Bottom/Container/Chicken")
+	var duck = hud.get_node("Bottom/Container/Duck")
+	var goose = hud.get_node("Bottom/Container/Goose")
+	var offset = Vector2(256, -312)
+	var scale = Vector2(0.5, 0.5)
+	
+	chicken.rect_position += offset
+	chicken.rect_scale += scale
 	hud.message(hud.AVATAR_DM, "This is the chicken, playing a ranger and survivalist, highly skilled with the bow.")
 	yield(hud, "message_clicked")
+	chicken.rect_position -= offset
+	chicken.rect_scale -= scale
 	
+	duck.rect_position += offset
+	duck.rect_scale += scale
 	hud.message(hud.AVATAR_DM, "That’s the other duck, playing a rogue, silent killer and master of stealth.")
 	yield(hud, "message_clicked")
+	duck.rect_position -= offset
+	duck.rect_scale -= scale
 	
+	goose.rect_position += offset
+	goose.rect_scale += scale
 	hud.message(hud.AVATAR_DM, "The goose is running a wizard, brilliant scholar and wielder of powerful magic.")
 	yield(hud, "message_clicked")
+	goose.rect_position -= offset
+	goose.rect_scale -= scale
 	
-	hud.message(hud.AVATAR_DM, "You get to play this generic fighter.")
+	hud.message(hud.AVATAR_DM, "You get to play the generic fighter.")
 	yield(hud, "message_finished")
 	
 	hud.option("I AM READY", self, "begin")
