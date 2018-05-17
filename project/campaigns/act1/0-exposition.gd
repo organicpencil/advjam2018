@@ -47,6 +47,8 @@ func begin():
 	hud.message(hud.AVATAR_DM, "Then let us begin...")
 	yield(hud, "message_clicked")
 	
+	get_node("../Panel").queue_free()
+	
 	hud.message(hud.AVATAR_DM, "Your party has traveled to the city of Ylihcester in search of violent work. The sun has fallen and only one inn has available rooms: The Squeaking Freezer, renowned for its rats and poor insulation.")
 	yield(hud, "message_clicked")
 	
