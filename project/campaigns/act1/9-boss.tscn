@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://controllers/dmaster.gd" type="Script" id=1]
 [ext_resource path="res://campaigns/boilerplate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://campaigns/act1/9-boss.gd" type="Script" id=3]
 [ext_resource path="res://campaigns/tilemap_template.tscn" type="PackedScene" id=4]
-[ext_resource path="res://pieces/playable/playablePiece.gd" type="Script" id=5]
-[ext_resource path="res://pieces/playable/Test_Piece.png" type="Texture" id=6]
-[ext_resource path="res://tempManager.gd" type="Script" id=7]
+[ext_resource path="res://tempManager.gd" type="Script" id=5]
+[ext_resource path="res://pieces/fighter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://pieces/ranger.tscn" type="PackedScene" id=7]
+[ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
+[ext_resource path="res://pieces/enemies/evil-wizard.tscn" type="PackedScene" id=10]
 
-[node name="Test" type="Node"]
+[node name="Test" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -23,67 +26,30 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="TileMap" parent="Map" index="0" instance=ExtResource( 4 )]
 
-[node name="Char_War" type="Node2D" parent="Map/TileMap" index="0" groups=[
-"Playable_Piece",
-]]
+[node name="Temp" type="Node2D" parent="Map/TileMap" index="0"]
 
-editor/display_folded = true
-position = Vector2( 905.284, 653.529 )
-z_index = 5
 script = ExtResource( 5 )
-movementRange = 1
-maxHP = 0
-hp = 0
-atk = 0
-def = 0
-dex = 0
-sta = 0
-wsm = 0
-traits = {
-0: 0
-}
 
-[node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War" index="0"]
+[node name="Fighter" parent="Map/TileMap" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 0, -128 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 785.752, 699.811 )
 
-[node name="Char_War2" type="Node2D" parent="Map/TileMap" index="1" groups=[
-"Playable_Piece",
-]]
+[node name="Ranger" parent="Map/TileMap" index="2" instance=ExtResource( 7 )]
 
-editor/display_folded = true
-position = Vector2( 649.333, 841.023 )
-z_index = 5
-script = ExtResource( 5 )
-_sections_unfolded = [ "Z Index" ]
-movementRange = 2
-maxHP = 0
-hp = 0
-atk = 0
-def = 0
-dex = 0
-sta = 0
-wsm = 0
-traits = {
-0: 0
-}
+position = Vector2( 1003.68, 868.625 )
 
-[node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War2" index="0"]
+[node name="Rogue" parent="Map/TileMap" index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 0, -128 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 751.989, 868.625 )
 
-[node name="Temp" type="Node2D" parent="Map/TileMap" index="2"]
+[node name="Wizard" parent="Map/TileMap" index="4" instance=ExtResource( 9 )]
 
-script = ExtResource( 7 )
+position = Vector2( 1006.75, 656.84 )
+
+[node name="EvilWizard" parent="Map" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 2154.68, 758.128 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 
