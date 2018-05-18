@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://controllers/dmaster.gd" type="Script" id=1]
 [ext_resource path="res://campaigns/boilerplate.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://pieces/ranger.tscn" type="PackedScene" id=7]
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Music/Mysterious.ogg" type="AudioStream" id=10]
 
 [node name="Test" type="Node" index="0"]
 
@@ -45,4 +46,10 @@ position = Vector2( 1151, 788.822 )
 
 position = Vector2( 883.971, 558.621 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
+stream = ExtResource( 10 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"

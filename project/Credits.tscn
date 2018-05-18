@@ -58,5 +58,3 @@ flat = false
 align = 1
 script = ExtResource( 2 )
 _sections_unfolded = [ "custom_fonts" ]
-
-

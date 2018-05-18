@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://controllers/dmaster.gd" type="Script" id=1]
 [ext_resource path="res://campaigns/boilerplate.tscn" type="PackedScene" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://pieces/objects/campfire.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Music/Camp.ogg" type="AudioStream" id=11]
 
-[node name="Test" type="Node"]
+[node name="Test" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -21,6 +22,7 @@ script = ExtResource( 3 )
 
 [node name="Map" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 scale = Vector2( 0.4, 0.4 )
 _sections_unfolded = [ "Transform" ]
 
@@ -52,4 +54,10 @@ position = Vector2( 773.475, 847.139 )
 
 position = Vector2( 1009.81, 662.978 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"

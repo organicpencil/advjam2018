@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://controllers/dmaster.gd" type="Script" id=1]
 [ext_resource path="res://campaigns/boilerplate.tscn" type="PackedScene" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://pieces/enemies/cube.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Music/Journey.ogg" type="AudioStream" id=11]
 
-[node name="Test" type="Node"]
+[node name="Test" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -50,4 +51,10 @@ position = Vector2( 497.234, 871.694 )
 
 position = Vector2( 2046.23, 666.21 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
