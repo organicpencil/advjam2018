@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TestTile.png-43d6e83c4cdc6488caa6764ea0b0ec8c.stex"
+path="res://.import/wizard.png-f114ae325a7197c37306d635356a0610.stex"
 
 [deps]
 
-source_file="res://Tiles/TestTile.png"
-source_md5="f6d37c5b3bf60d3578af3ffc0042f49b"
+source_file="res://hud/avatars/wizard.png"
+source_md5="90184b32c86d01eae5ae4910f4f537c3"
 
-dest_files=[ "res://.import/TestTile.png-43d6e83c4cdc6488caa6764ea0b0ec8c.stex" ]
-dest_md5="888a1261c623190eb5fb19402ed6414d"
+dest_files=[ "res://.import/wizard.png-f114ae325a7197c37306d635356a0610.stex" ]
+dest_md5="c2ac9356f0b2dec51a10cf6e58bc304c"
 
 [params]
 

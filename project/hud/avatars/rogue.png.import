@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duck.png-ea36a5b0c96ac7e070f837bb0a81018b.stex"
+path="res://.import/rogue.png-945a717003d8d353d506ed5dad9c265e.stex"
 
 [deps]
 
-source_file="res://hud/avatars/duck.png"
-source_md5="a1c4f1414ba6b39d6a6dc665c80a3451"
+source_file="res://hud/avatars/rogue.png"
+source_md5="92d0f592afa1a1e78233a0705b524a9f"
 
-dest_files=[ "res://.import/duck.png-ea36a5b0c96ac7e070f837bb0a81018b.stex" ]
-dest_md5="cf1daf673a4362c88f56242c70aa6070"
+dest_files=[ "res://.import/rogue.png-945a717003d8d353d506ed5dad9c265e.stex" ]
+dest_md5="090bf80653bffdb563af38f047661d70"
 
 [params]
 

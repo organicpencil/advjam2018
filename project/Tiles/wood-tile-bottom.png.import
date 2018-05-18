@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TestTile.png-43d6e83c4cdc6488caa6764ea0b0ec8c.stex"
+path="res://.import/wood-tile-bottom.png-d92a1616795c66c959d3800802740a71.stex"
 
 [deps]
 
-source_file="res://Tiles/TestTile.png"
-source_md5="f6d37c5b3bf60d3578af3ffc0042f49b"
+source_file="res://Tiles/wood-tile-bottom.png"
+source_md5="93f15feccd5fe28321345c6a0aa55ab5"
 
-dest_files=[ "res://.import/TestTile.png-43d6e83c4cdc6488caa6764ea0b0ec8c.stex" ]
-dest_md5="888a1261c623190eb5fb19402ed6414d"
+dest_files=[ "res://.import/wood-tile-bottom.png-d92a1616795c66c959d3800802740a71.stex" ]
+dest_md5="144163a03d7b186bb59335fc60ece88f"
 
 [params]
 
