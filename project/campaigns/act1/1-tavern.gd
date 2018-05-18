@@ -15,7 +15,7 @@ func combat_finished():
 	pass
 	
 func next_encounter():
-	hud.message(hud.AVATAR_DM, "<abrupt scene change>")
+	hud.message(hud.AVATAR_DM, "Alright that's enough of the tavern. We're moving to the next scene.")
 	yield(hud, "message_clicked")
 	
 	get_tree().change_scene_to(NEXT_ENCOUNTER)
@@ -62,14 +62,14 @@ func option_door():
 		yield(hud, "message_clicked")
 		hud.message(hud.AVATAR_RANGER, "I'll stay with the duck. The rest can have their own room.")
 		yield(hud, "message_clicked")
-		hud.message(hud.AVATAR_DM, "Very well. You stay the night without paying. Upon leaving - you notice a flier on the door. <name here> is hiring adventurers for an undisclosed task.")
+		hud.message(hud.AVATAR_DM, "Very well. You stay the night without paying. Upon leaving - you notice a flier on the door. <generic NPC name> is hiring adventurers for an undisclosed task.")
 		yield(hud, "message_clicked")
 		
 		next_encounter()
 		
 	
 func option_morning():
-	hud.message(hud.AVATAR_DM, "The party shares a room, with barely enough money to pay for the night. When you pay the next morning, the barkeep is impressed and suggests speaking to <name here> about a possible employment opportunity.")
+	hud.message(hud.AVATAR_DM, "The party shares a room, with barely enough money to pay for the night. When you pay the next morning, the barkeep is impressed and suggests speaking to <generic NPC name> about a possible employment opportunity.")
 	yield(hud, "message_clicked")
 	
 	hud.message(hud.AVATAR_ROGUE, "Impressed that we all fit in such a small room?")
@@ -84,7 +84,7 @@ func option_morning_nopay():
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_ROGUE, "Do they take credit?")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_DM, "The barkeep tells you not to worry about it. The people that stay here can rarely pay. He's happy enough that you managed to afford 1 room, and suggests that you seek out <name here> for possible employment.")
+	hud.message(hud.AVATAR_DM, "The barkeep tells you not to worry about it. The people that stay here can rarely pay. He's happy enough that you managed to afford 1 room, and suggests that you seek out <generic NPC name> for possible employment.")
 	yield(hud, "message_clicked")
 	
 	next_encounter()
@@ -92,7 +92,7 @@ func option_morning_nopay():
 func option_morning_outside():
 	hud.message(hud.AVATAR_DM, "It's a long and cold night, but only slightly colder than it was inside. At least you're not kept up by the rats in the wall.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_DM, "The others chose to share a room, with barely enough money to pay for the night. You regroup in the tavern the next morning. The barkeep - impressed that you actually paid - suggests speaking to <name here> about a possible employment opportunity.")
+	hud.message(hud.AVATAR_DM, "The others chose to share a room, with barely enough money to pay for the night. You regroup in the tavern the next morning. The barkeep - impressed that you actually paid - suggests speaking to <generic NPC name> about a possible employment opportunity.")
 	yield(hud, "message_clicked")
 	
 	next_encounter()
@@ -120,7 +120,7 @@ func option_work():
 	hud.message(hud.AVATAR_RANGER, "Troublemakers, you say? That happens to be our field of expertise.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_DM, "Barkeep: Hmm... in that case, try <name> over at the <place>. There's been talk of a pesky wizard harassing the countryside.")
+	hud.message(hud.AVATAR_DM, "Barkeep: Hmm... in that case, try <generic NPC name> over at the <insert special place>. There's been talk of a pesky wizard harassing the countryside.")
 	yield(hud, "message_clicked")
 	
 	next_encounter()
@@ -132,7 +132,7 @@ func option_refuse():
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_RANGER, "Can we ask him about local employment opportunities?")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_DM, "I don't think the barkeep wants to help you right now. However, you do see a flier posted on the wall. <name here> is looking to hire adventuring-types for a special job.")
+	hud.message(hud.AVATAR_DM, "I don't think the barkeep wants to help you right now. However, you do see a flier posted on the wall. <generic NPC name> is looking to hire adventuring-types for a special job.")
 	yield(hud, "message_clicked")
 	
 	next_encounter()
@@ -142,7 +142,7 @@ func option_run():
 	yield(hud, "message_clicked")
 	hud.message(hud.AVATAR_WIZARD, "Nice.")
 	yield(hud, "message_clicked")
-	hud.message(hud.AVATAR_DM, 'Ok, so you got out of paying the tab. On the way out - you notice a flier on the door. <name here> is seeking "adventurers" for a special job.')
+	hud.message(hud.AVATAR_DM, 'Ok, so you got out of paying the tab. On the way out - you notice a flier on the door. <generic NPC name> is seeking "adventurers" for a special job.')
 	yield(hud, "message_clicked")
 	
 	next_encounter()

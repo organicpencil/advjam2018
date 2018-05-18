@@ -10,7 +10,7 @@
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
 
-[node name="Test" type="Node"]
+[node name="Test" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

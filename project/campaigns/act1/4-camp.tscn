@@ -51,6 +51,5 @@ position = Vector2( 773.475, 847.139 )
 [node name="Campfire" parent="Map" index="1" instance=ExtResource( 10 )]
 
 position = Vector2( 1009.81, 662.978 )
-scale = Vector2( 1, 1 )
 
 

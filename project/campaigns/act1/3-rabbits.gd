@@ -9,7 +9,7 @@ func _ready():
 func start_encounter():
 	#get_parent().connect("insert_signal_for_combat_finished_here", self, "combat_finished")
 	# Wait for message_clicked when more dialogue is queued
-	hud.message(hud.AVATAR_DM, "Suddenly, the party is set-upon by a pack of feral rabbits!")
+	hud.message(hud.AVATAR_DM, "You're travelling through the forest. Suddenly, the party is set-upon by a pack of feral rabbits!")
 	yield(hud, "message_finished")
 	
 	hud.option("Fight", self, "option_fight")
@@ -18,10 +18,10 @@ func start_encounter():
 	
 ##########
 func option_fight():
-	hud.message(hud.AVATAR_DM, "<standard combat encounter, congrats on the victory!>")
+	hud.message(hud.AVATAR_DM, "<combat not implemented> We'll just call this a victory. Those that can't escape are effortlessly slaughtered.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_DM, "<abrupt scene change>")
+	hud.message(hud.AVATAR_DM, "Moving on...")
 	yield(hud, "message_clicked")
 	
 	get_tree().change_scene_to(NEXT_ENCOUNTER)
@@ -55,7 +55,7 @@ func option_run():
 	hud.message(hud.AVATAR_ROGUE, "Yes.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_DM, "<abrupt scene change>")
+	hud.message(hud.AVATAR_DM, "Moving on...")
 	yield(hud, "message_clicked")
 	
 	get_tree().change_scene_to(NEXT_ENCOUNTER)
@@ -65,7 +65,7 @@ func option_flap():
 	hud.message(hud.AVATAR_DM, "Looks like you spooked em. They move a few meters away. The path is clear.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_DM, "<abrupt scene change>")
+	hud.message(hud.AVATAR_DM, "Moving on...")
 	yield(hud, "message_clicked")
 	
 	get_tree().change_scene_to(NEXT_ENCOUNTER)
