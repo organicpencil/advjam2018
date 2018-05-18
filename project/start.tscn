@@ -1,13 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://start.gd" type="Script" id=1]
-<<<<<<< HEAD
 [ext_resource path="res://Credits.tscn" type="PackedScene" id=2]
 [ext_resource path="res://campaigns/act1/0-exposition.tscn" type="PackedScene" id=3]
 [ext_resource path="res://dynamic_font.tres" type="DynamicFont" id=4]
-=======
-[ext_resource path="res://campaigns/act1/0-exposition.tscn" type="PackedScene" id=2]
->>>>>>> 0fbd5a12e7b178d85e66323c882890c7ae5d4537
 
 [node name="Node" type="Node" index="0"]
 
