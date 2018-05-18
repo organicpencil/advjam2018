@@ -1,5 +1,60 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://dynamic_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://back.gd" type="Script" id=2]
 
 [node name="Credits" type="Node" index="0"]
 
+[node name="Label" type="Label" parent="." index="0"]
 
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -131.0
+margin_top = -404.0
+margin_right = 131.0
+margin_bottom = -322.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Ana Carolina Matos Franca - Art
+Lee Pugh (organicpencil) - Code + Writing
+Sheila Heady (sheilaheady.com) - Music
+SimplyBLG - Code"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -90.0
+margin_top = -314.0
+margin_right = 89.0
+margin_bottom = -232.0
+rect_rotation = 0.0112059
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+script = ExtResource( 2 )
+_sections_unfolded = [ "custom_fonts" ]
