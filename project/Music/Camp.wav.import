@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Camp.wav-d2ecc1e486d905bb86b8f288ea6d174a.sample"
+
+[deps]
+
+source_file="res://Music/Camp.wav"
+source_md5="58832d82ab10ddcffcd3d131ce678ae0"
+
+dest_files=[ "res://.import/Camp.wav-d2ecc1e486d905bb86b8f288ea6d174a.sample" ]
+dest_md5="e9e1f27da07a9a7e187e01033ae92190"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

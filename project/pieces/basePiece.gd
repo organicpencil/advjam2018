@@ -7,7 +7,7 @@ var finishTurn = false
 enum CHAR_TRAITS {
 	NONE, QUICK_THINKING, FAST_AIM, LEADER}
 
-export var tilemapPosition = Vector2(0, 0) # Grid Position
+var tilemapPosition = null # Grid Position
 
 export var movementRange = 1 # 		Max tile movement in a single turn
 
@@ -31,17 +31,19 @@ export var traits = {NONE : 0}
 # being a multiplier (where applicable).
 
 func _ready():
-	_set_pos(tilemapPosition)
-	pass
+	if tilemapPosition == null:
+		# Editor: Snap to grid based on starting position
+		tilemapPosition = $"..".world_to_map(position)
+		# Snap broke, taking it out
+		#position = $"..".map_to_world(tilemapPosition)
+	else:
+		# Not editor: ?
+		pass
 
 func _change_pos(newPos):
 	tilemapPosition += newPos
 	position = $"..".map_to_world(tilemapPosition)
-	pass
-
-func _set_pos(newPos):
-	tilemapPosition = newPos
-	position = $"..".map_to_world(tilemapPosition)
+	print($"..".get_tile(tilemapPosition.x, tilemapPosition.y))
 	pass
 
 func _process_turn():
@@ -59,7 +61,7 @@ func _begin_turn():
 	pass
 
 func _turn():
-	_finish_turn() #Overriden in every piece
+	_finish_turn() #Overrided in every piece
 	pass
 
 func _end_turn():

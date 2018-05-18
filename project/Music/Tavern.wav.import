@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tavern.wav-0deef7e182ecdb2fd6997bbcee8a7614.sample"
+
+[deps]
+
+source_file="res://Music/Tavern.wav"
+source_md5="4b1481109703708560ee1a26b10c7155"
+
+dest_files=[ "res://.import/Tavern.wav-0deef7e182ecdb2fd6997bbcee8a7614.sample" ]
+dest_md5="69868716f5e4b392435bea890ddcd09d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

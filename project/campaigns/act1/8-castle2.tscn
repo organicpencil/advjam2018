@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://controllers/dmaster.gd" type="Script" id=1]
+[ext_resource path="res://campaigns/boilerplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://campaigns/act1/8-castle2.gd" type="Script" id=3]
+[ext_resource path="res://campaigns/tilemap_template.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tempManager.gd" type="Script" id=5]
+[ext_resource path="res://pieces/fighter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://pieces/ranger.tscn" type="PackedScene" id=7]
+[ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Music/Dungeon.wav" type="AudioStream" id=10]
+
+[node name="Test" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Boilerplate" parent="." index="0" instance=ExtResource( 2 )]
+
+script = ExtResource( 3 )
+
+[node name="Map" type="Node2D" parent="." index="1"]
+
+scale = Vector2( 0.4, 0.4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" parent="Map" index="0" instance=ExtResource( 4 )]
+
+[node name="Temp" type="Node2D" parent="Map/TileMap" index="0"]
+
+script = ExtResource( 5 )
+
+[node name="Fighter" parent="Map/TileMap" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 874.763, 616.938 )
+
+[node name="Ranger" parent="Map/TileMap" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 632.285, 794.96 )
+
+[node name="Rogue" parent="Map/TileMap" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 1025.16, 877.833 )
+
+[node name="Wizard" parent="Map/TileMap" index="4" instance=ExtResource( 9 )]
+
+position = Vector2( 1286.06, 684.464 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mysterious.wav-5c1f953bdbdd3b9bf61bfd5b69a6f421.sample"
+
+[deps]
+
+source_file="res://Music/Mysterious.wav"
+source_md5="e48339b981662129b90f9cd088b2286f"
+
+dest_files=[ "res://.import/Mysterious.wav-5c1f953bdbdd3b9bf61bfd5b69a6f421.sample" ]
+dest_md5="e3d945baf9d2207fb6fa7d6b5e61a9ce"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

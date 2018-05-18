@@ -1,7 +1,7 @@
 extends TileMap
 
 const HEX_DIRS_EVEN = [Vector2(1, 0), Vector2(-1, 0), Vector2(0, -1), Vector2(-1, -1), Vector2(0, 1), Vector2(-1, 1)]
-const HEX_DIRS_ODD = [Vector2(1, 0), Vector2(-1, 0), Vector2(1, -1), Vector2(0, -1), Vector2(0, 1), Vector2(1, 1)]
+const HEX_DIRS_ODD = [Vector2(1, 0), Vector2(-1, 0), Vector2(0, -1), Vector2(1, -1), Vector2(0, 1), Vector2(1, 1)]
 
 func _get_range(origin, tile_range):
 	var tiles = [origin]
@@ -23,23 +23,11 @@ func _get_range(origin, tile_range):
 
 #Don't even try to understand what's going on here, it's no use
 func _pixel_to_hex_tile(globalPos):
-	var mapTile = world_to_map(globalPos)
+	var pos = globalPos / cell_size
 	
-	var pos = globalPos - map_to_world(mapTile)
-	pos /= cell_size
+	var temp = floor(pos.x + sqrt(3) * pos.y + 1)
+	var q = floor((floor(2 * pos.x + 1) + temp) / 3)
+	var r = floor((temp + floor(-pos.x + sqrt(3) * pos.y + 1)) / 3)
+	q -= floor(r / 2) + 1
 	
-	var realTile = mapTile
-	
-	if(1-pos.y > 1-abs((pos.x - 0.5)*2/3)):
-		var DIRS
-		if(int(mapTile.y) % 2 == 0):
-			DIRS = HEX_DIRS_EVEN
-		else:
-			DIRS = HEX_DIRS_ODD
-		
-		if(pos.x > 0.5):
-			realTile += DIRS[2] #Upper Right
-		else:
-			realTile += DIRS[3] #Upper Left
-	
-	return realTile
+	return Vector2(q, r)
