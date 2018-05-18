@@ -9,7 +9,7 @@
 [ext_resource path="res://pieces/ranger.tscn" type="PackedScene" id=7]
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Music/Town.wav" type="AudioStream" id=10]
+[ext_resource path="res://Music/Town.ogg" type="AudioStream" id=10]
 
 [node name="Test" type="Node" index="0"]
 
@@ -21,7 +21,6 @@ script = ExtResource( 3 )
 
 [node name="Map" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
 scale = Vector2( 0.4, 0.4 )
 _sections_unfolded = [ "Transform" ]
 

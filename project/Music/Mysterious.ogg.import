@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mysterious.ogg-a97658c3f086c51a009d534dcd912687.oggstr"
+
+[deps]
+
+source_file="res://Music/Mysterious.ogg"
+source_md5="00e1094d8c7c744ce2079fd1ca248d4b"
+
+dest_files=[ "res://.import/Mysterious.ogg-a97658c3f086c51a009d534dcd912687.oggstr" ]
+dest_md5="356ea37a6a4a7067943153b899404fd8"
+
+[params]
+
+loop=true
+loop_offset=0

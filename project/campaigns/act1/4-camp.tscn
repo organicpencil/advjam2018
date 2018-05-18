@@ -10,7 +10,7 @@
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://pieces/objects/campfire.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Music/Camp.wav" type="AudioStream" id=11]
+[ext_resource path="res://Music/Camp.ogg" type="AudioStream" id=11]
 
 [node name="Test" type="Node" index="0"]
 
@@ -22,6 +22,7 @@ script = ExtResource( 3 )
 
 [node name="Map" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 scale = Vector2( 0.4, 0.4 )
 _sections_unfolded = [ "Transform" ]
 
@@ -52,7 +53,6 @@ position = Vector2( 773.475, 847.139 )
 [node name="Campfire" parent="Map" index="1" instance=ExtResource( 10 )]
 
 position = Vector2( 1009.81, 662.978 )
-<<<<<<< HEAD
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
@@ -61,7 +61,5 @@ volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"
-=======
->>>>>>> 6a7c5093b47a63ccfc4257c351199e0699d8c2cd
 
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Camp.ogg-69aee8b336812e82d570f50a91029eed.oggstr"
+
+[deps]
+
+source_file="res://Music/Camp.ogg"
+source_md5="88f9ad62f9b4c5a2dc0945e31d8060db"
+
+dest_files=[ "res://.import/Camp.ogg-69aee8b336812e82d570f50a91029eed.oggstr" ]
+dest_md5="632a2d0733c95ecbef92c8caec7c5d72"
+
+[params]
+
+loop=true
+loop_offset=0

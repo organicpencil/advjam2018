@@ -43,7 +43,6 @@ func _ready():
 func _change_pos(newPos):
 	tilemapPosition += newPos
 	position = $"..".map_to_world(tilemapPosition)
-	print($"..".get_tile(tilemapPosition.x, tilemapPosition.y))
 	pass
 
 func _process_turn():

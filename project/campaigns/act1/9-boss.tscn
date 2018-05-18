@@ -10,7 +10,7 @@
 [ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://pieces/enemies/evil-wizard.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Music/Dungeon.wav" type="AudioStream" id=11]
+[ext_resource path="res://Music/Dungeon.ogg" type="AudioStream" id=11]
 
 [node name="Test" type="Node" index="0"]
 
