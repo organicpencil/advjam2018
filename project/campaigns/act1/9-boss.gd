@@ -11,13 +11,16 @@ func _ready():
 func start_encounter():
 	#get_parent().connect("insert_signal_for_combat_finished_here", self, "combat_finished")
 	# Wait for message_clicked when more dialogue is queued
-	hud.message(hud.AVATAR_DM, "<boss fight>")
+	hud.message(hud.AVATAR_DM, "OK! So again - I haven't actually prepared the combat mechanics. So the evil wizard - completely terrified by your presence - leaps out the window, leaving her staff behind.")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_DM, "Congrats! You beat the boss. More was planned, but we're running short on time. You go back to town and collect your reward etc. Bed time.")
+	hud.message(hud.AVATAR_WIZARD, "At least we got the staff...")
 	yield(hud, "message_clicked")
 	
-	hud.message(hud.AVATAR_RANGER, "Wait, that's it?")
+	hud.message(hud.AVATAR_DM, "Congrats! Yeah, there's a lot more to this module, but we're reeeeally running short on time. You go back to town and collect your reward etc. Bed time.")
+	yield(hud, "message_clicked")
+	
+	hud.message(hud.AVATAR_RANGER, "That's it?")
 	yield(hud, "message_clicked")
 	
 	hud.message(hud.AVATAR_DM, "Yep. Thanks for playing!")
@@ -38,4 +41,4 @@ func start_encounter():
 	hud.option("Time to pack up and leave.", self, "option_finish")
 	
 func option_finish():
-	hud.message(hud.AVATAR_DM, "PLACEHOLDER: Switch back to the menu or something.")
+	get_tree().change_scene("res://start.tscn")
