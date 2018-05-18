@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://pieces/playable/playablePiece.gd" type="Script" id=1]
+[ext_resource path="res://pieces/ranger.png" type="Texture" id=2]
+
+[node name="Ranger" type="Node2D"]
+
+z_index = 5
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+movementRange = 1
+maxHP = 0
+hp = 0
+atk = 0
+def = 0
+dex = 0
+sta = 0
+wsm = 0
+traits = {
+0: 0
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 0, -128 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

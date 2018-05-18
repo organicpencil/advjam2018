@@ -1,14 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://controllers/dmaster.gd" type="Script" id=1]
 [ext_resource path="res://campaigns/boilerplate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://campaigns/act1/2-town.gd" type="Script" id=3]
 [ext_resource path="res://campaigns/tilemap_template.tscn" type="PackedScene" id=4]
-[ext_resource path="res://pieces/playable/playablePiece.gd" type="Script" id=5]
-[ext_resource path="res://pieces/playable/Test_Piece.png" type="Texture" id=6]
-[ext_resource path="res://tempManager.gd" type="Script" id=7]
+[ext_resource path="res://tempManager.gd" type="Script" id=5]
+[ext_resource path="res://pieces/fighter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://pieces/ranger.tscn" type="PackedScene" id=7]
+[ext_resource path="res://pieces/rogue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://pieces/wizard.tscn" type="PackedScene" id=9]
 
-[node name="Test" type="Node" index="0"]
+[node name="Test" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -25,67 +27,24 @@ _sections_unfolded = [ "Transform" ]
 
 tile_data = PoolIntArray( 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0 )
 
-[node name="Char_War" type="Node2D" parent="Map/TileMap" index="0" groups=[
-"Playable_Piece",
-]]
+[node name="Temp" type="Node2D" parent="Map/TileMap" index="0"]
 
-editor/display_folded = true
-position = Vector2( 905.284, 653.529 )
-z_index = 5
 script = ExtResource( 5 )
-movementRange = 1
-maxHP = 0
-hp = 0
-atk = 0
-def = 0
-dex = 0
-sta = 0
-wsm = 0
-traits = {
-0: 0
-}
 
-[node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War" index="0"]
+[node name="Fighter" parent="Map/TileMap" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 0, -128 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 1043.58, 705.949 )
 
-[node name="Char_War2" type="Node2D" parent="Map/TileMap" index="1" groups=[
-"Playable_Piece",
-]]
+[node name="Ranger" parent="Map/TileMap" index="2" instance=ExtResource( 7 )]
 
-editor/display_folded = true
-position = Vector2( 649.333, 841.023 )
-z_index = 5
-script = ExtResource( 5 )
-_sections_unfolded = [ "Z Index" ]
-movementRange = 2
-maxHP = 0
-hp = 0
-atk = 0
-def = 0
-dex = 0
-sta = 0
-wsm = 0
-traits = {
-0: 0
-}
+position = Vector2( 880.902, 788.822 )
 
-[node name="Sprite" type="Sprite" parent="Map/TileMap/Char_War2" index="0"]
+[node name="Rogue" parent="Map/TileMap" index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 0, -128 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 644.562, 791.891 )
 
-[node name="Temp" type="Node2D" parent="Map/TileMap" index="2"]
+[node name="Wizard" parent="Map/TileMap" index="4" instance=ExtResource( 9 )]
 
-script = ExtResource( 7 )
+position = Vector2( 773.475, 675.256 )
 
 

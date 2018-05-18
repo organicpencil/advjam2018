@@ -34,7 +34,8 @@ func _ready():
 	if tilemapPosition == null:
 		# Editor: Snap to grid based on starting position
 		tilemapPosition = $"..".world_to_map(position)
-		position = $"..".map_to_world(tilemapPosition)
+		# Snap broke, taking it out
+		#position = $"..".map_to_world(tilemapPosition)
 	else:
 		# Not editor: ?
 		pass
