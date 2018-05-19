@@ -21,7 +21,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Ana Carolina Matos Franca - Art
+text = "Ana Carolina Matos França - Art
 Lee Pugh (organicpencil) - Code + Writing
 Sheila Heady (sheilaheady.com) - Music
 SimplyBLG - Code"
@@ -58,3 +58,5 @@ flat = false
 align = 1
 script = ExtResource( 2 )
 _sections_unfolded = [ "custom_fonts" ]
+
+
